@@ -658,23 +658,27 @@ def process_message(chat_id, text, user_id):
         try:
             res = requests.get(MOBILE_API + clean_text, headers=HEADERS, timeout=30).json()
             r = res.get("data", {}).get("data", {}).get("result", [])
-if not r:
-    delete_message(chat_id, loading)
-    send_message(chat_id, "⚠️ No record found")
-    return
 
-fid = send_txt_file_with_caption(
-    chat_id,
-    f"Report_{datetime.now().strftime('%d%m%Y_%H%M%S')}.txt",
-    build_common_txt(r[0])
-)
-delete_message(chat_id, loading)
-threading.Thread(
-    target=auto_delete_file,
-    args=(chat_id, fid),
-    daemon=True
-).start()
-return
+            if not r:
+                delete_message(chat_id, loading)
+                send_message(chat_id, "⚠️ No record found")
+                return
+
+            fid = send_txt_file_with_caption(
+                chat_id,
+                f"Report_{datetime.now().strftime('%d%m%Y_%H%M%S')}.txt",
+                build_common_txt(r[0])
+            )
+            delete_message(chat_id, loading)
+            threading.Thread(
+                target=auto_delete_file,
+                args=(chat_id, fid),
+                daemon=True
+            ).start()
+        except:
+            delete_message(chat_id, loading)
+            send_message(chat_id, "⚠️ Server error, please try again")
+        return
 
     # ---------- /aadhaar ----------
     if lower.startswith("/aadhaar "):
@@ -768,43 +772,43 @@ return
         return
 
     # ---------- /upi ----------
-if lower.startswith("/upi "):
-    if not clean_text:
-        send_message(chat_id, "❌ Please provide UPI ID\n💡 Example: /upi username@bank")
-        return
-
-    if not is_upi_id(clean_text):
-        send_message(
-            chat_id,
-            "❌ Invalid UPI ID!\n\n"
-            "💡 Example: /upi username@bank\n"
-            "📌 Format: Must contain @ symbol"
-        )
-        return
-
-    loading = send_message(chat_id, "🔍 Fetching details… please wait ⏳")
-    try:
-        res = requests.get(UPI_API + clean_text, headers=HEADERS, timeout=30).json()
-        arr = res.get("data", {}).get("data", {}).get("verify_chumts", [])
-        if not arr:
-            delete_message(chat_id, loading)
-            send_message(chat_id, "⚠️ No record found")
+    if lower.startswith("/upi "):
+        if not clean_text:
+            send_message(chat_id, "❌ Please provide UPI ID\n💡 Example: /upi username@bank")
             return
-        fid = send_txt_file_with_caption(
-            chat_id,
-            f"Report_{datetime.now().strftime('%d%m%Y_%H%M%S')}.txt",
-            build_upi_txt(arr[0])
-        )
-        delete_message(chat_id, loading)
-        threading.Thread(
-            target=auto_delete_file,
-            args=(chat_id, fid),
-            daemon=True
-        ).start()
-    except:
-        delete_message(chat_id, loading)
-        send_message(chat_id, "⚠️ Server error, please try again")
-    return
+
+        if not is_upi_id(clean_text):
+            send_message(
+                chat_id,
+                "❌ Invalid UPI ID!\n\n"
+                "💡 Example: /upi username@bank\n"
+                "📌 Format: Must contain @ symbol"
+            )
+            return
+
+        loading = send_message(chat_id, "🔍 Fetching details… please wait ⏳")
+        try:
+            res = requests.get(UPI_API + clean_text, headers=HEADERS, timeout=30).json()
+            arr = res.get("data", {}).get("data", {}).get("verify_chumts", [])
+            if not arr:
+                delete_message(chat_id, loading)
+                send_message(chat_id, "⚠️ No record found")
+                return
+            fid = send_txt_file_with_caption(
+                chat_id,
+                f"Report_{datetime.now().strftime('%d%m%Y_%H%M%S')}.txt",
+                build_upi_txt(arr[0])
+            )
+            delete_message(chat_id, loading)
+            threading.Thread(
+                target=auto_delete_file,
+                args=(chat_id, fid),
+                daemon=True
+            ).start()
+        except:
+            delete_message(chat_id, loading)
+            send_message(chat_id, "⚠️ Server error, please try again")
+        return
 
     # ---------- /fam ----------
     if lower.startswith("/fam "):
