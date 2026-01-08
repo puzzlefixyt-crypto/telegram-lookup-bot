@@ -45,7 +45,7 @@ HEADERS = {
 }
 
 # ================= ADMIN CONFIG =================
-ADMIN_IDS = [7912022536]
+ADMIN_IDS = [5221493804]
 
 # ================= LICENCE FILES =================
 KEYS_FILE = "keys.txt"
