@@ -25,7 +25,7 @@ threading.Thread(target=run_web, daemon=True).start()
 # ================= CONFIG =================
 FORCE_JOIN_CHANNEL = "@DeepXTrace2"
 VERIFIED_USERS_FILE = "verified_users.json"
-BOT_TOKEN = os.getenv("8208876135:AAGm9nOwTcyqR2WFNH-174PKecmUISKlS20")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     print("Error: BOT_TOKEN not set in environment variables!")
     print("Please set BOT_TOKEN in Render Environment Variables")
