@@ -44,7 +44,7 @@ threading.Thread(target=run_web, daemon=True).start()
 DISABLED_COMMANDS_FILE = "disabled_commands.json"
 FORCE_JOIN_CHANNEL = "@DeepXTraceOfficial"
 VERIFIED_USERS_FILE = "verified_users.json"
-BOT_TOKEN = os.getenv("BOT_TOKEN") or "8208876135:AAHjXypfj9Rp0L1nP-cr9Q4xz05isauhVyM"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 # ===== BOT STATS FILE =====
 STATS_FILE = "bot_stats.json"
 if not BOT_TOKEN:
