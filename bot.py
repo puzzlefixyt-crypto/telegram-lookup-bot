@@ -9,7 +9,6 @@ import json
 import random
 import string
 import asyncio
-from telethon import TelegramClient
 
 # ===== PUBLIC COMMAND HELP CONFIG =====
 BOT_USERNAME = "@DeepTraceXBot"
