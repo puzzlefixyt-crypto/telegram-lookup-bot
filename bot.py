@@ -8,7 +8,6 @@ import re
 import json
 import random
 import string
-import asyncio
 
 # ===== PUBLIC COMMAND HELP CONFIG =====
 BOT_USERNAME = "@DeepTraceXBot"
@@ -64,10 +63,6 @@ OSINT_API = "https://api.b77bf911.workers.dev/telegram?user="
 TRACE_API = "https://king.mr-unknown.workers.dev/Pera?track="
 GMAIL_API = "https://king.mr-unknown.workers.dev/Pera?mail="
 
-# ===== TELETHON CONFIG =====
-API_ID = 39514017
-API_HASH = "4df1e1cc2f2559ace55b0d7b5a55082b"
-SESSION_NAME = "tg_resolver_session"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Android)",
@@ -136,11 +131,8 @@ USED_KEYS_FILE = "used_keys.json"
 ACTIVE_USERS_FILE = "active_users.json"
 
 # -------- CREATE & SET EVENT LOOP (Python 3.13 FIX) --------
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
 
 # -------- TELETHON CLIENT --------
-tg_client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
 
 # ================= LICENCE FUNCTIONS =================
 def init_licence_files():
@@ -1763,9 +1755,7 @@ def main():
     print("🤖 Bot is running...")
     
     # ✅ CORRECT Telethon start
-    tg_client.start()
-    print("✅ Telethon logged in OK")
-    
+        
     offset = 0
 
     while True:
