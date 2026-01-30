@@ -499,12 +499,12 @@ LOOKUP REPORT
 -------------------
 
 Name        : {d.get('name')}
-Father Name : {d.get('fname')}
+Father Name : {d.get('father_name')}
 Mobile      : {d.get('mobile')}
-Alt Mobile  : {d.get('alt')}
+Alt Mobile  : {d.get('alt_mobile')}
 Circle      : {d.get('circle')}
 Address     : {address}
-ID Number   : {d.get('id')}
+Id Number   : {d.get('id_number')}
 Email       : {d.get('email') if d.get('email') else 'Not Available'}
 
 Checked On  : {datetime.now().strftime('%d-%m-%Y')}
@@ -1209,7 +1209,7 @@ def process_message(chat_id, text, user_id, message_id):
         loading = send_message(chat_id, "🔍 Fetching details… please wait ⏳", reply_to_message_id=reply_to)
         try:
             res = requests.get(MOBILE_API + clean_text, headers=HEADERS, timeout=30).json()
-            r = res.get("data", {}).get("results", [])
+            r = res.get("data", [])
 
             if not r:
                 delete_message(chat_id, loading)
