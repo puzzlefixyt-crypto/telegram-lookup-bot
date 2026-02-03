@@ -83,8 +83,8 @@ WELCOME_MESSAGE = (
     "ᴠɴᴜᴍ: <code>/vnum</code> <code>GJ01AB1234</code>\n"
     "ɪᴘ: <code>/ip</code> <code>8.8.8.8</code>\n"
     "ᴛʀᴀᴄᴇ: <code>/trace</code> <code>98XXXXXXXX</code>\n"
-    "ɢᴍᴀɪʟ: <code>/gmail</code> <code>example@gmail.com</code>\n\n"
-    "ғғ: <code>/ff</code> <code>2819649271</code>\n"
+    "ɢᴍᴀɪʟ: <code>/gmail</code> <code>example@gmail.com</code>\n"
+    "ғғ: <code>/ff</code> <code>2819649271</code>\n\n"
     "📩 Admin: <code>/admin</code> <code>your message</code>\n"
     "📄 Files auto-delete in 60s"
 )
