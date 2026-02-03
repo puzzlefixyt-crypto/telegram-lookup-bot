@@ -74,7 +74,7 @@ HEADERS = {
 WELCOME_MESSAGE = (
     "🛰️ <b>DeepTraceXBot Intelligence</b>\n\n"
     "ᴍᴏʙɪʟᴇ: <code>/num</code> <code>98XXXXXX10</code>\n"
-    "ᴛʀᴜᴇᴄᴀʟʟᴇʀ: <code>/truecaller</code> <code>98XXXXXXXX</code>\n"
+    "ᴛʀᴜᴇᴄᴀʟʟᴇʀ: <code>/truecaller</code> <code>98XXXX</code>\n"
     "ᴀᴀᴅʜᴀᴀʀ: <code>/aadhaar</code> <code>1234XXXX9012</code>\n"
     "ɢsᴛ: <code>/gst</code> <code>24ABCDE1234F1Z5</code>\n"
     "ɪғsᴄ: <code>/ifsc</code> <code>SBIN0000000</code>\n"
@@ -91,7 +91,7 @@ WELCOME_MESSAGE = (
 )
 COMMAND_ORDER = [
     ("num", "ᴍᴏʙɪʟᴇ: /num 98XXXXXX10"),
-    ("truecaller", "ᴛʀᴜᴇᴄᴀʟʟᴇʀ: /truecaller 98XXXXXXXX"),
+    ("truecaller", "ᴛʀᴜᴇᴄᴀʟʟᴇʀ: /truecaller 98XXXX"),
     ("aadhaar", "ᴀᴀᴅʜᴀᴀʀ: /aadhaar 1234XXXX9012"),
     ("gst", "ɢsᴛ: /gst 24ABCDE1234F1Z5"),
     ("ifsc", "ɪғsᴄ: /ifsc SBIN0000000"),
@@ -121,7 +121,7 @@ BOT_USERNAME = "@DeepTraceXBot"
 
 HELP_MAP = {
     "/num": "💡 Usage: /num 98XXXXXXXX",
-    "/truecaller": "💡 Usage: /truecaller 98XXXXXXXX",
+    "/truecaller": "💡 Usage: /truecaller 98XXXX",
     "/upi": "💡 Usage: /upi username@bank",
     "/fam": "💡 Usage: /fam username@fam",
     "/gst": "💡 Usage: /gst 24ABCDE1234F1Z5",
