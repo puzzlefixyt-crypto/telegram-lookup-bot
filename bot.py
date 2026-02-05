@@ -49,16 +49,24 @@ threading.Thread(target=run_web, daemon=True).start()
 # ================================
 
 # ================= CONFIG =================
-MIN_GROUP_MEMBERS = 100
+MIN_GROUP_MEMBERS = 535
 
 GROUP_LIMIT_MESSAGE = (
     "🚫 <b>Access Restricted</b>\n\n"
-    "This bot is available only for groups & channels "
-    "with minimum <b>100 members</b>.\n\n"
-    "📊 Your group/channel does not meet eligibility.\n\n"
-    "🔓 For professional access:\n"
+    "This bot is limited to <b>verified high-traffic groups & channels</b> only.\n\n"
+    "📊 <b>Minimum Requirement:</b>\n"
+    "• <b>535 active members</b>\n\n"
+    "❌ Your group/channel has not reached the required target.\n\n"
+    "🎯 <b>How to unlock access?</b>\n"
+    "• <b>Share the official target group link</b>\n"
+    "• <b>Add new members</b> to complete the target\n\n"
+    "⚡ Once the member target is completed, "
+    "<b>bot access will start automatically</b>.\n\n"
+    "🔗 <b>Official Target Group Link:</b>\n"
+    "👉 https://t.me/+caHRhuChqx41ODg1\n\n"
+    "🔓 <b>Professional / Instant Access:</b>\n"
     "👉 Contact Admin: <b>@imvrct</b>\n\n"
-    "⚡ DeepTraceXBot Security System"
+    "⚡ DeepTraceXBot • Automated Target Verification System"
 )
 
 FORCE_JOIN_CHANNEL = "@DeepXTraceOfficial"
