@@ -104,15 +104,25 @@ threading.Thread(target=run_web, daemon=True).start()
 # ================================
 
 # ================= CONFIG =================
-MIN_GROUP_MEMBERS = 100
+MIN_GROUP_MEMBERS = 540
 
 GROUP_LIMIT_MESSAGE = (
     "🚫 <b>Access Restricted</b>\n\n"
-    "This bot is available only for groups & channels "
-    "with minimum <b>100 members</b>.\n\n"
-    "📊 Your group/channel does not meet eligibility.\n\n"
-    "🔓 For professional access:\n"
-    "👉 Contact Admin: <b>@imvrct</b>\n\n"
+    "This bot works only in groups & channels "
+    "with enough members.\n\n"
+    "📊 <b>Group Members</b>\n"
+    "👥 Current: <b>{current_members}</b>\n"
+    "🎯 Required: <b>{required_members}</b>\n"
+    "➕ Needed: <b>{need_members}</b>\n\n"
+    "🧩 <b>How to unlock?</b>\n"
+    "• Share this link\n"
+    "• Add new members to complete the target\n\n"
+    "🔗 <b>Target Group Link:</b>\n"
+    "👉 https://t.me/+caHRhuChqx41ODg1\n\n"
+    "⚡ Access will start automatically "
+    "once the target is completed.\n\n"
+    "🔓 Help needed?\n"
+    "👉 Contact: <b>@imvrct</b>\n\n"
     "⚡ DeepTraceXBot Security System"
 )
 
