@@ -104,7 +104,7 @@ threading.Thread(target=run_web, daemon=True).start()
 # ================================
 
 # ================= CONFIG =================
-MIN_GROUP_MEMBERS = 550
+MIN_GROUP_MEMBERS = 555
 
 GROUP_LIMIT_MESSAGE = (
     "🚫 <b>Access Restricted</b>\n\n"
