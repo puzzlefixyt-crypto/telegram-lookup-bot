@@ -1328,7 +1328,7 @@ def process_message(chat_id, text, user_id, message_id):
         loading = send_message(chat_id, "🔍 Fetching details… please wait ⏳", reply_to_message_id=reply_to)
         try:
             res = requests.get(MOBILE_API + clean_text, headers=HEADERS, timeout=30).json()
-            r = res.get("data", {}).get("data", {}).get("results", [])
+            r = res.get("data", {}).get("results", [])
 
 
             if not r:
