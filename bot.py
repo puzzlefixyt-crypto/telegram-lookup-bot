@@ -541,7 +541,7 @@ Mobile      : {d.get('mobile')}
 Alt Mobile  : {d.get('alt_mobile')}
 Circle      : {d.get('circle')}
 Address     : {address}
-Id Number   : {d.get('id_number')}
+Id Number   : {d.get('id')}
 Email       : {d.get('email') if d.get('email') else 'Not Available'}
 
 Checked On  : {datetime.now().strftime('%d-%m-%Y')}
