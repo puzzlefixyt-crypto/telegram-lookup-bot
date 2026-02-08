@@ -60,7 +60,7 @@ if not BOT_TOKEN:
 
 TG_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
-MOBILE_API = "https://api.b77bf911.workers.dev/mobile?number="
+MOBILE_API = "https://usesirosint.vercel.app/api/numinfo?key=RADHA@2024z&num="
 AADHAAR_API = "https://api.b77bf911.workers.dev/aadhaar?id="
 GST_API = "https://api.b77bf911.workers.dev/gst?number="
 IFSC_API = "https://api.b77bf911.workers.dev/ifsc?code="
@@ -541,7 +541,7 @@ Mobile      : {d.get('mobile')}
 Alt Mobile  : {d.get('alt_mobile')}
 Circle      : {d.get('circle')}
 Address     : {address}
-Id Number   : {d.get('id')}
+Id Number   : {d.get('id_number') or d.get('DATA_ID')}
 Email       : {d.get('email') if d.get('email') else 'Not Available'}
 
 Checked On  : {datetime.now().strftime('%d-%m-%Y')}
