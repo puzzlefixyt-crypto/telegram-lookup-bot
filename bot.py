@@ -57,7 +57,7 @@ threading.Thread(target=run_web, daemon=True).start()
 # ================================
 
 # ================= CONFIG =================
-FORCE_JOIN_CHANNEL = "@deeptracenew"
+FORCE_JOIN_CHANNEL = "@infodeep1"
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     print("Error: BOT_TOKEN not set in environment variables!")
@@ -489,7 +489,7 @@ def send_join_message(chat_id, reply_to_message_id=None):
             [
                 {
                     "text": "📢 Join Channel",
-                    "url": "https://t.me/deeptracenew"
+                    "url": "https://t.me/infodeep1"
                 }
             ],
             [
