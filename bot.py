@@ -58,7 +58,7 @@ threading.Thread(target=run_web, daemon=True).start()
 
 # ================= CONFIG =================
 FORCE_JOIN_CHANNEL = "@deeptracenew"
-BOT_TOKEN = os.getenv("BOT_TOKEN") or "8127993303:AAFD-it_gOMdZJmIMupYMMuHxjzyJ-P522g"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     print("Error: BOT_TOKEN not set in environment variables!")
     print("Please set BOT_TOKEN in Render Environment Variables")
